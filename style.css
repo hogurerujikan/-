@@ -1,0 +1,319 @@
+/* 基本設定 */
+body {
+font-family: 'Noto Serif JP', serif; /* 日本語に適したフォント */
+line-height: 1.8;
+color: #333; /* 落ち着いた濃い色 */
+background-color: #F8F8F8; /* 全体的にきなりっぽい背景色 */
+margin: 0;
+padding: 0;
+}
+
+a {
+color: #BC8F8F; /* 薄めの茶色 */
+text-decoration: none;
+}
+
+a:hover {
+text-decoration: underline;
+}
+
+h1, h2, h3 {
+font-family: 'Hina Mincho', serif; /* タイトルは柔らかな印象のフォント */
+color: #8B4513; /* 落ち着いた茶色 */
+text-align: center;
+margin-bottom: 1em;
+}
+
+h2 {
+font-size: 2.2em;
+padding-bottom: 0.5em;
+border-bottom: 1px solid #D2B48C; /* 薄い茶色の下線 */
+margin-bottom: 1.5em;
+}
+
+h3 {
+font-size: 1.6em;
+color: #BC8F8F; /* 薄めの茶色 */
+text-align: left;
+margin-top: 2em;
+margin-bottom: 0.8em;
+}
+
+ul {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+li {
+margin-bottom: 0.5em;
+position: relative;
+padding-left: 1.5em;
+}
+
+li::before {
+content: '◎'; /* 丸いマーク */
+color: #BC8F8F; /* 薄めの茶色 */
+position: absolute;
+left: 0;
+}
+
+.section-padding {
+padding: 40px 5%;
+max-width: 960px;
+margin: 0 auto;
+background-color: #FFFFFF; /* 各セクションの背景は白に */
+border-radius: 8px;
+box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* ほんのり影 */
+margin-bottom: 30px;
+}
+
+/* ヘッダー */
+header {
+background-color: #D2B48C; /* 薄めの茶色 */
+color: #FFF;
+padding: 15px 5%;
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-container {
+max-width: 960px;
+margin: 0 auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap; /* スマホ表示時に折り返す */
+}
+
+.logo {
+display: flex;
+align-items: center;
+}
+
+.logo img {
+height: 50px; /* ロゴの高さ */
+margin-right: 10px;
+border-radius: 50%; /* ロゴを丸くするなら */
+}
+
+.logo h1 {
+font-family: 'Hina Mincho', serif;
+font-size: 1.8em;
+margin: 0;
+color: #FFF;
+text-align: left;
+}
+
+nav ul {
+display: flex;
+gap: 20px;
+}
+
+nav a {
+color: #FFF;
+font-weight: bold;
+padding: 5px 10px;
+transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+background-color: rgba(255,255,255,0.2);
+border-radius: 5px;
+text-decoration: none;
+}
+
+/* メインビジュアル */
+.hero {
+background-image: url('placeholder_knitting.jpg'); /* 編み物のイメージ画像 */
+background-size: cover;
+background-position: center;
+height: 400px; /* 適度な高さ */
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+color: #FFF;
+text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* 文字を見やすくするための影 */
+margin-bottom: 30px;
+border-radius: 8px;
+}
+
+.hero-content {
+background-color: rgba(0, 0, 0, 0.4); /* 文字が読みやすいように半透明の背景 */
+padding: 20px 40px;
+border-radius: 10px;
+}
+
+.hero .catchphrase {
+font-family: 'Hina Mincho', serif;
+font-size: 2.5em;
+font-weight: bold;
+margin: 0;
+}
+
+/* 各セクション内の調整 */
+.section-padding p {
+margin-bottom: 1em;
+}
+
+/* コンセプトとおすすめ */
+.concept-grid, .recommend-grid, .voice-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* レスポンシブ対応のグリッド */
+gap: 20px;
+margin-top: 20px;
+}
+
+.concept-item, .recommend-item, .voice-item {
+background-color: #F5F5DC; /* きなりっぽい背景色 */
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.concept-item h3, .recommend-item h3, .flow-step h3, .voice-item p:first-child {
+text-align: center;
+font-size: 1.4em;
+margin-top: 0;
+color: #8B4513;
+}
+
+.voice-item p:first-child {
+font-weight: bold;
+margin-bottom: 0.5em;
+font-family: 'Noto Serif JP', serif;
+}
+
+.flow-step {
+margin-bottom: 2em;
+border-left: 5px solid #D2B48C; /* 左にボーダー */
+padding-left: 15px;
+}
+
+.flow-step:last-child {
+margin-bottom: 0;
+}
+
+/* Q&A */
+dl {
+margin-top: 20px;
+}
+
+dt {
+font-weight: bold;
+color: #BC8F8F;
+margin-top: 1.5em;
+font-size: 1.1em;
+}
+
+dd {
+margin-left: 1em;
+margin-bottom: 1em;
+}
+
+/* フッター */
+footer {
+background-color: #BC8F8F; /* 薄めの茶色 */
+color: #FFF;
+text-align: center;
+padding: 20px;
+margin-top: 50px;
+}
+
+.footer-info {
+max-width: 960px;
+margin: 0 auto 20px auto;
+border-bottom: 1px solid rgba(255,255,255,0.3);
+padding-bottom: 20px;
+}
+
+.footer-info h3 {
+color: #FFF;
+margin-bottom: 1em;
+text-align: center;
+}
+
+.footer-info p {
+margin: 0.5em 0;
+}
+
+.footer-info a {
+color: #FFF;
+font-weight: bold;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+.header-container {
+flex-direction: column;
+text-align: center;
+}
+
+.logo {
+margin-bottom: 15px;
+}
+
+nav ul {
+flex-direction: column;
+gap: 10px;
+}
+
+.hero .catchphrase {
+font-size: 1.8em;
+}
+
+h2 {
+font-size: 1.8em;
+}
+
+h3 {
+font-size: 1.4em;
+}
+
+.concept-grid, .recommend-grid, .voice-grid {
+grid-template-columns: 1fr; /* スマホでは1列表示 */
+}
+}
+
+/* ページトップへ戻るボタン */
+#page-top {
+position: fixed; /* 画面に固定 */
+right: 20px; /* 右から20px */
+bottom: 20px; /* 下から20px */
+/* display: block; */ /* JavaScriptで opacity と visibility を制御するので不要 */
+background-color: rgba(210, 180, 140, 0.7); /* 薄めの茶色を少し透過 */
+color: #FFF;
+width: 50px; /* ボタンの幅 */
+height: 50px; /* ボタンの高さ */
+border-radius: 50%; /* 丸い形にする */
+text-align: center;
+line-height: 50px; /* テキストを垂直方向の中央に配置 */
+font-size: 0.8em;
+font-weight: bold;
+text-decoration: none;
+box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+opacity: 0; /* 最初は透明（見えない状態） */
+visibility: hidden; /* クリックもできない状態 */
+transition: opacity 0.5s ease, visibility 0.5s ease; /* 表示・非表示をスムーズに */
+z-index: 1000; /* 他の要素の上に表示 */
+}
+
+#page-top.is-show {
+opacity: 1; /* 表示するときは不透明に */
+visibility: visible; /* クリックできるように */
+}
+
+#page-top:hover {
+background-color: rgba(188, 143, 143, 0.8); /* ホバー時の色 */
+}
+
+/* レスポンシブ対応の調整 */
+@media (max-width: 768px) {
+#page-top {
+right: 15px;
+bottom: 15px;
+width: 45px;
+height: 45px;
+line-height: 45px;
+}
+}
